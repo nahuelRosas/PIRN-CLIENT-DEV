@@ -1,0 +1,50 @@
+.searchBar_container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--background_quaternary);
+  align-items: center;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+.opacity_on_searchBar {
+  opacity: 1;
+  left: 0;
+  z-index: 5000;
+}
+.opacity_off_searchBar {
+  opacity: 0;
+  left: 100%;
+  z-index: 0;
+}
+.searchBar {
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.searchBar_input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.4rem;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: var(--background_quaternary);
+}
+.searchBar_input:focus {
+  outline: none;
+}
+.searchBar_input::-webkit-search-cancel-button {
+  display: none;
+}
+.close_icon_searchBar {
+  margin-left: 1rem;
+  color: var(--text_primary);
+  font-size: 4vh;
+}

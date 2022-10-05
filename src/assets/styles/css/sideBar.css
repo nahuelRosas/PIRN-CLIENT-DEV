@@ -1,0 +1,75 @@
+.sideBar_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background_secondary);
+  display: grid;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+.opacity_on_sideBar {
+  opacity: 1;
+  left: 0;
+  z-index: 250;
+}
+.opacity_off_sidebar {
+  opacity: 0;
+  left: -100%;
+  z-index: 0;
+}
+.icon_sideBar {
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  color: var(--text_secondary);
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+}
+.close-icon_sideBar {
+  color: var(--text_secondary);
+}
+.sidebar-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sidebar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text_secondary);
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .opacity_off_sidebar {
+    opacity: 1;
+    left: -83%;
+    z-index: 1;
+  }
+  .opacity_on_sideBar {
+    opacity: 1;
+    left: -83%;
+    z-index: 1;
+  }
+  .icon_sideBar {
+    opacity: 0;
+    left: -100%;
+    z-index: 0;
+  }
+  .sidebar-wrapper {
+    position: absolute;
+    left: 85%;
+  }
+  .sidebar-menu {
+    grid-row-gap: 5rem;
+  }
+}

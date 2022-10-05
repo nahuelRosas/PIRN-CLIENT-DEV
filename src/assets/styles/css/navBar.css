@@ -1,0 +1,90 @@
+.navBar {
+  background: var(--background_primary);
+  width: 100%;
+  height: 6vh;
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  transition: 0.2s ease-in-out;
+}
+.containerDataNavBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.opacity_off_navBar {
+  opacity: 0;
+  left: -100%;
+}
+.opacity_on_navBar {
+  opacity: 1;
+  left: 0;
+}
+.iconsNavBar {
+  display: grid;
+  width: 100%;
+  position: absolute;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  color: var(--text_secondary);
+  font-size: 2rem;
+  cursor: pointer;
+  justify-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .iconsNavBar {
+    gap: 75rem;
+    font-size: 1.5rem;
+  }
+  .opacity_off_navBar {
+    opacity: 1;
+    left: 0;
+  }
+  .icon_Menu {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .iconsNavBar {
+    gap: 40rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .iconsNavBar {
+    gap: 33rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  .iconsNavBar {
+    gap: 20rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  .iconsNavBar {
+    font-size: 2rem;
+    gap: 15rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .iconsNavBar {
+    gap: 10rem;
+  }
+}
+@media (min-width: 150px) and (max-width: 300px) {
+  .iconsNavBar {
+    gap: 3rem;
+  }
+}
+@media (min-width: 50px) and (max-width: 150px) {
+  .iconsNavBar {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+}

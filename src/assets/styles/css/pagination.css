@@ -1,0 +1,112 @@
+.pagination {
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  display: flex;
+  flex-direction: row;
+  --ddim: 10px;
+  --rd: 15px;
+  --rdim: calc(var(--rd) * 2);
+  --pm: #ffff03;
+}
+
+.label_dot {
+  content: "";
+  margin: 0 10px;
+  height: var(--ddim);
+  width: var(--ddim);
+  background: #f7b997;
+  cursor: pointer;
+}
+
+.label_dot:first-child {
+  margin-left: 0;
+}
+.label_dot:last-child {
+  margin-right: 0;
+}
+.dot_input {
+  display: none;
+}
+
+.pacman {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--ddim));
+  left: calc(-1 * var(--ddim) / 2);
+  height: var(--rdim);
+  width: var(--rdim);
+  transition: transform 250ms linear;
+}
+
+.pacman:before,
+.pacman:after {
+  content: "";
+  position: absolute;
+  height: var(--rd);
+  width: var(--rdim);
+  left: 0;
+  background: var(--pm);
+  transition: inherit;
+}
+
+.pacman:before {
+  top: 0;
+  border-top-left-radius: var(--rdim);
+  border-top-right-radius: var(--rdim);
+  transform-origin: bottom center;
+  transform: rotate(-45deg);
+}
+
+.pacman:after {
+  bottom: 0;
+  border-bottom-left-radius: var(--rdim);
+  border-bottom-right-radius: var(--rdim);
+  transform-origin: top center;
+  transform: rotate(45deg);
+}
+
+@keyframes waka {
+  0% {
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+  }
+}
+
+.dot_input[type="radio"]:hover ~ .pacman:before,
+.dot_input[type="radio"]:hover ~ .pacman:after {
+  animation: waka 500ms infinite;
+}
+.dot_input[id="dot-1"]:checked ~ .pacman {
+  transform: translateX(var(--ddim));
+}
+.dot_input[id="dot-2"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim)));
+}
+.dot_input[id="dot-3"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 2));
+}
+.dot_input[id="dot-4"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 3));
+}
+.dot_input[id="dot-5"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 4));
+}
+.dot_input[id="dot-6"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 5));
+}
+.dot_input[id="dot-7"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 6));
+}
+.dot_input[id="dot-8"]:checked ~ .pacman {
+  transform: translateX(calc(var(--ddim) + var(--rdim) * 7));
+}
+@media screen and (min-width: 1200px) {
+  .pagination {
+    top: 18%;
+    left: 50%;
+  }
+}

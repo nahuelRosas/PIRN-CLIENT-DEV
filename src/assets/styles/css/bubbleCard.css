@@ -1,0 +1,81 @@
+.bubbleCard_container {
+  position: absolute;
+  width: 100%;
+  background: var(--background_primary);
+  top: 7%;
+  border-radius: 0 0 1rem 1rem;
+  transition: 0.2s ease-in-out;
+}
+.opacity_on_bubbleCard {
+  opacity: 1;
+  z-index: 350;
+}
+.opacity_off_bubbleCard {
+  opacity: 0;
+  z-index: 0;
+}
+.icon_bubbleCard {
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  color: var(--text_secondary);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.close_icon_bubbleCard {
+  color: var(--text_secondary);
+}
+.bubbleCard_menu {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 2rem;
+  text-align: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--text_secondary);
+  margin: 2rem;
+}
+
+.bubbleCard-Genres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.bubbleCard-Platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.bubbleCard-Stores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.bubbleCard-CreatedinDB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.icon_bubbleCard > span {
+  position: absolute;
+  top: -5.2rem;
+}
+.bubbleCard_status_button {
+  text-align: initial;
+  font-size: 1rem;
+  color: var(--text_secondary);
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  .bubbleCard_container {
+    width: 25%;
+    left: 0%;
+  }
+}

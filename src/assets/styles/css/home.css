@@ -1,0 +1,79 @@
+.home_container {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: var(--background_tertiary);
+  top: 14.5%;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.home_container_content_games {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 1.7rem;
+  padding: 5px;
+  font-size: 0.8rem;
+  color: var(--text_secondary);
+  justify-content: center;
+}
+.home_container_empty {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-width: 100vw;
+  min-height: 75vh;
+}
+.home_container span {
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 900;
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.SVG_home_empty {
+  color: #ffb703;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+.home_cointainer_Pagination {
+  width: 100%;
+  height: 10%;
+  top: 95%;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  background: var(--background_tertiary);
+}
+@media screen and (min-width: 1200px) {
+  .home_container {
+    width: 83%;
+    height: 87%;
+    left: 17%;
+    top: 7%;
+  }
+  .home_container_content_games {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var(--text_secondary);
+    justify-content: center;
+  }
+}
